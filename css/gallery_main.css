@@ -1,0 +1,11 @@
+.landscape-image {
+  height: 13rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.portrait-image {
+  height: 30rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
