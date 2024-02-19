@@ -83,7 +83,13 @@
       <div class="max-w-screen-md flex-grow">
         <h1 class="text-4xl pt-10 pb-8"><b>CONTACT</b></h1>
 
-        <form class="space-y-8" netlify>
+        <form
+          class="space-y-8"
+          name="contact"
+          method="POST"
+          data-netlify-recaptcha="true"
+          data-netlify="true"
+        >
           <div>
             <label
               for="email"
@@ -126,6 +132,7 @@
               required
             ></textarea>
           </div>
+          <div data-netlify-recaptcha="true"></div>
           <button
             type="submit"
             class="py-3 px-5 text-sm font-medium text-center bg-white text-black rounded-lg hover:bg-black hover:text-white hover:border white"
