@@ -140,7 +140,7 @@ p.opaque-black {
 }
 
 .invite-link-black {
-  color: #000000;
+  color: #010101;
   max-width: 200px;
 }
 
@@ -221,7 +221,7 @@ button {
 }
 
 .section_text_black {
-  background-color: #000000;
+  background-color: #010101;
 }
 
 .section_text_white {
@@ -245,7 +245,7 @@ button {
 }
 
 .section-create-img {
-  background-image: url("../dist/images/TimSnaps_cover.jpg");
+  background-image: url("../dist/images/tim_cover_camera_l.jpg");
   background-size: cover;
 }
 
@@ -705,18 +705,6 @@ button {
   .section_image {
     width: 35%;
   }
-  .section-create-img {
-    background-image: url("../dist/images/create-and-share-tablet.jpg");
-    background-position: center;
-  }
-  .section-stories-img {
-    background-image: url("../dist/images/beautiful-stories-tablet.jpg");
-    background-position: center;
-  }
-  .section-everyone-img {
-    background-image: url("../dist/images/designed-for-everyone-tablet.jpg");
-    background-position: center;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1069,7 +1057,7 @@ button {
     height: 300px;
   }
   .section-create-img {
-    background-image: url("../dist/images/TimSnaps_cover_phone.jpg");
+    background-image: url("../dist/images/tim_cover_camera_l_phone.jpg");
   }
   .section-stories-img {
     background-image: url("../dist/images/beautiful-stories-mobile.jpg");
