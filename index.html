@@ -5,56 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TimSnaps - Home</title>
-    <link rel="stylesheet" href="css/main.css" />
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="dist/images/favicon.ico" />
-    <link rel="stylesheet" href="dist/output.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Alpine.js -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <!-- Start - Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- End - Fonts -->
-    <!-- Start - Fancybox Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <!-- End - Fancybox Scripts -->
+    <link rel="stylesheet" href="css/main.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        content: ["./dist/*.{html,js}"],
-        theme: {
-          extend: {
-            fontFamily: {
-              nothingyoucoulddo: ["Nothing You Could Do", "cursive"],
-              signika: ["Signika", "sans-serif"],
-            },
-          },
-        },
-        plugins: [],
-      };
-    </script>
+    <script defer src="dist/app.js"></script>
   </head>
 
-  <body
-    class="bg-black h-screen text-black text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500"
-  >
+  <body class="bg-black h-screen text-white px-5 md:px-20">
     <!-- Navbar -->
     <nav class="bg-black">
       <div
@@ -81,7 +39,7 @@
       </div>
     </nav>
     <!-- TIMSNAPS SECTION -->
-    <section class="create">
+    <section class="create hide">
       <div class="container-lg">
         <div class="row">
           <div class="section_text section_text_black">
@@ -100,13 +58,23 @@
           <div class="section_image section-create-img"></div>
         </div>
       </div>
+      <div id="scrollBtnDiv" class="flex w-full">
+        <button id="scrollDownButton" class="scroll-down-button">
+          <div class="scrollDiv scrollDiv1"></div>
+          <div class="scrollDiv scrollDiv2"></div>
+        </button>
+      </div>
     </section>
+
     <!-- GALLERY SECTION -->
-    <section class="gallery">
+    <section id="scrollBtnTarget" class="gallery">
       <div class="container-lg">
-        <div class="grid">
-          <a href="portraits.html" class="image-container">
-            <div class="image image-1">
+        <div class="flex flex-col md:flex-row w-full justify-evenly">
+          <a
+            href="portraits.html"
+            class="image-container img-box hide grow px-4"
+          >
+            <div class="image image-1 rounded-md">
               <div class="image-box">
                 <div class="image-textbox">
                   <h3>Portraits</h3>
@@ -119,8 +87,11 @@
               </div>
             </div>
           </a>
-          <a href="commercial.html" class="image-container">
-            <div class="image image-2">
+          <a
+            href="commercial.html"
+            class="image-container img-box hide grow px-4"
+          >
+            <div class="image image-2 rounded-md">
               <div class="image-box">
                 <div class="image-textbox">
                   <h3>Commercial</h3>
@@ -133,8 +104,8 @@
               </div>
             </div>
           </a>
-          <a href="events.html" class="image-container">
-            <div class="image image-3">
+          <a href="events.html" class="image-container img-box hide grow px-4">
+            <div class="image image-3 rounded-md">
               <div class="image-box">
                 <div class="image-textbox">
                   <h3>Events</h3>
@@ -147,8 +118,8 @@
               </div>
             </div>
           </a>
-          <a href="cars.html" class="image-container">
-            <div class="image image-4">
+          <a href="cars.html" class="image-container img-box hide grow px-4">
+            <div class="image image-4 rounded-md">
               <div class="image-box">
                 <div class="image-textbox">
                   <h3>Cars</h3>
@@ -247,10 +218,5 @@
       </div>
     </footer>
     <!-- Script for the LightBox -->
-    <script>
-      Fancybox.bind("[data-fancybox]", {});
-    </script>
-    <script src="dist/fade_in.js"></script>
-    <script src="dist/menu.js"></script>
   </body>
 </html>

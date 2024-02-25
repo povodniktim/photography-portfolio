@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "DM Sans Regular";
+  src: url("../dist/textfont/DMSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DM Sans Bold";
+  src: url("../dist/textfont/DMSans-Bold.ttf") format("truetype");
+}
+
 .remove-padding {
   padding: 0 !important;
 }
@@ -14,16 +24,6 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-@font-face {
-  font-family: "DM Sans Regular";
-  src: url("../dist/textfont/DMSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "DM Sans Bold";
-  src: url("../dist/textfont/DMSans-Bold.ttf") format("truetype");
 }
 
 h1 {
@@ -181,13 +181,6 @@ button {
   display: flex;
 }
 
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr) [4];
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .container,
 .container-lg,
 .container-small {
@@ -204,9 +197,95 @@ button {
   max-width: 3000px;
 }
 
-.container-small {
-  max-width: 900px;
-  padding: 0 20px;
+/* ------------ Scroll Down Button ------------ */
+.scrollDiv {
+  left: 50%;
+  transform: translateY(0%) rotate(45deg);
+  opacity: 0;
+}
+
+.scrollDiv1 {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  z-index: 80;
+  bottom: 25px;
+  position: absolute;
+  border-width: 0 0.25em 0.25em 0;
+  border-style: solid;
+  border-color: antiquewhite;
+  animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+}
+
+.scrollDiv2 {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  z-index: 80;
+  bottom: 40px;
+  position: absolute;
+  border-width: 0 0.25em 0.25em 0;
+  border-style: solid;
+  border-color: antiquewhite;
+  animation: scrolldown 1.2s ease-in-out infinite;
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(0%) rotate(45deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+/* ------------ Scroll animation ------------*/
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 85vh;
+}
+
+.img-box:nth-child(1) {
+  transition: opacity 1.2s ease, filter 1.2s ease, transform 1.2s ease;
+}
+
+.img-box:nth-child(2) {
+  transition: opacity 1.5s ease, filter 1.5s ease, transform 1.5s ease;
+}
+
+.img-box:nth-child(3) {
+  transition: opacity 1.8s ease, filter 1.8s ease, transform 1.8s ease;
+}
+
+.img-box:nth-child(4) {
+  transition: opacity 2.1s ease, filter 2.1s ease, transform 2.1s ease;
+}
+
+.hide {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+.show {
+  opacity: 1 !important;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hide {
+    transition: none;
+  }
 }
 
 .section_text {
@@ -772,250 +851,61 @@ button {
       ),
       url("../dist/images/cars/AudiA4_main.jpg");
   }
-  .image-5 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/world-tour-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/world-tour-m.jpg");
+
+  /* ---------- Scroll animation ----------  */
+  section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
   }
-  .image-6 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/unforeseen-corners-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/unforeseen-corners-m.jpg");
+
+  .img-box:nth-child(1) {
+    transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
+    margin-bottom: 1.5rem;
   }
-  .image-7 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/king-on-africa-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/king-on-africa-m.jpg");
+
+  .img-box:nth-child(2) {
+    transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+    margin-bottom: 1.5rem;
   }
-  .image-8 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/trip-to-nowhere-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/trip-to-nowhere-m.jpg");
+
+  .img-box:nth-child(3) {
+    transition: opacity 1.2s ease, filter 1.2s ease, transform 1.2s ease;
+    margin-bottom: 1.5rem;
   }
-  .image-9 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/rage-of-the-sea-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/rage-of-the-sea-m.jpg");
+
+  .img-box:nth-child(4) {
+    transition: opacity 1.6s ease, filter 1.6s ease, transform 1.6s ease;
+    margin-bottom: 1.5rem;
   }
-  .image-10 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/running-free-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/running-free-m.jpg");
+
+  .hide {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all 0.5s;
   }
-  .image-11 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/behind-the-waves-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/behind-the-waves-m.jpg");
+
+  .show {
+    opacity: 1 !important;
+    filter: blur(0);
+    transform: translateX(0);
   }
-  .image-12 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/calm-waters-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/calm-waters-m.jpg");
+
+  /* --------- Scroll Down Button --------- */
+  .scrollDiv {
+    opacity: 0;
   }
-  .image-13 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/milky-way-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/milky-way-m.jpg");
+
+  .scrollDiv1 {
+    opacity: 0;
+    animation: none;
   }
-  .image-14 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/dark-forest-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/dark-forest-m.jpg");
-  }
-  .image-15 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/somwarpet-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/somwarpet-m.jpg");
-  }
-  .image-16 {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0.5))
-      ),
-      url("../dist/images/land-of-dreams-m.jpg");
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("../dist/images/land-of-dreams-m.jpg");
-  }
-  .pricing-tabs h4 {
-    text-align: center;
-  }
-  .pricing-tabs .price-box {
-    height: 350px;
-    padding: 40px;
-    text-align: center;
-  }
-  .pricing-tabs .price-box p {
-    max-width: 100%;
-  }
-  .pricing-tabs .price-box .btn {
-    margin: auto;
-  }
-  .pricing-tabs .price-box.pro {
-    height: 350px;
-  }
-  .compare .table .table_head .col-2 {
-    display: none;
-  }
-  .compare .table_row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .compare .table_row .col-1 {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .compare .table_row .col-2 span {
-    margin-right: 50px;
-  }
-  .compare .table_row .mobile-flex-column {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .compare .table_row .mobile-flex-column img {
-    display: block;
-    width: 17px;
-    margin-top: 8px;
-  }
-  .compare .table_row .mobile-flex-column .plan-name {
-    display: block;
-    font-size: 10px;
+
+  .scrollDiv2 {
+    opacity: 0;
+    animation: none;
   }
 }
 
