@@ -22,16 +22,5 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollButton.addEventListener("click", function () {
       targetSection.scrollIntoView({ behavior: "smooth" });
     });
-
-    // Adjust scroll behavior to navigate to the full page content
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    navLinks.forEach((link) => {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      });
-    });
   });
 });
