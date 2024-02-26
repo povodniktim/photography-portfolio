@@ -250,6 +250,10 @@ section {
   display: grid;
   place-items: center;
   align-content: center;
+  min-height: 100vh;
+}
+
+.timsnaps-section {
   min-height: 85vh;
 }
 
