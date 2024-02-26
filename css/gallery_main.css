@@ -1,3 +1,10 @@
+/* ------------ Scrollbar ------------ */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: gray black;
+}
+
 .landscape-image {
   height: 13rem !important;
   width: 100% !important;

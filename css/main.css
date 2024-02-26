@@ -160,7 +160,6 @@ p.opaque-black {
 body {
   font-family: "DM Sans Regular", sans-serif;
   font-size: 15px;
-  background-color: rgb(23, 23, 23);
 }
 
 ul {
@@ -195,6 +194,13 @@ button {
 
 .container-lg {
   max-width: 3000px;
+}
+
+/* ------------ Scrollbar ------------ */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: gray black;
 }
 
 /* ------------ Scroll Down Button ------------ */
@@ -277,7 +283,7 @@ section {
   opacity: 0;
   filter: blur(10px);
   transform: translateX(-100%);
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 .show {
