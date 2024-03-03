@@ -334,7 +334,7 @@ section {
 }
 
 .section-create-img {
-  background-image: url("../dist/images/tim_cover_camera_l.jpg");
+  background-image: url("../dist/images/tim_cover_camera_l_combined.png");
   background-size: cover;
 }
 
@@ -957,7 +957,7 @@ section {
     height: 23rem;
   }
   .section-create-img {
-    background-image: url("../dist/images/tim_cover_camera_l_phone.jpg");
+    background-image: url("../dist/images/tim_cover_camera_l_combined_phone.png");
   }
   .section-stories-img {
     background-image: url("../dist/images/beautiful-stories-mobile.jpg");

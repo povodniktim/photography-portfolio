@@ -13,14 +13,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const hiddenElements = document.querySelectorAll(".hide");
   hiddenElements.forEach((element) => observer.observe(element));
-
-  // Adding scroll functionality after the page has loaded
-  window.addEventListener("load", function () {
-    const scrollButton = document.getElementById("scrollDownButton");
-    const targetSection = document.getElementById("scrollBtnTarget");
-
-    scrollButton.addEventListener("click", function () {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    });
-  });
 });
